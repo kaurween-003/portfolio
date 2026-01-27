@@ -1,0 +1,208 @@
+/* Scroll Animations */
+.scroll-animate {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Slide Up Animation */
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide In From Left */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In From Right */
+.slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale Animation */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animations for grid items */
+.stagger-1 {
+  transition-delay: 0.05s;
+}
+
+.stagger-2 {
+  transition-delay: 0.1s;
+}
+
+.stagger-3 {
+  transition-delay: 0.15s;
+}
+
+.stagger-4 {
+  transition-delay: 0.2s;
+}
+
+.stagger-5 {
+  transition-delay: 0.25s;
+}
+
+.stagger-6 {
+  transition-delay: 0.3s;
+}
+
+/* Section animations */
+.section-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover enhancements */
+.animated-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animated-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Rotating animation for icons */
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  overflow: hidden;
+  border-right: 2px solid #E0A15D;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #E0A15D;
+  }
+}
+
+/* Count up animation for numbers */
+@keyframes countUp {
+  0% { 
+    transform: scale(0.3) rotateY(-360deg) rotateX(-180deg);
+    opacity: 0;
+    color: #ffffff;
+  }
+  25% {
+    transform: scale(1.8) rotateY(-180deg) rotateX(-90deg);
+    opacity: 0.5;
+    color: #E0A15D;
+  }
+  50% {
+    transform: scale(0.8) rotateY(-90deg) rotateX(-45deg);
+    opacity: 0.8;
+    color: #ffffff;
+  }
+  75% {
+    transform: scale(1.4) rotateY(-45deg) rotateX(0deg);
+    opacity: 0.9;
+    color: #E0A15D;
+  }
+  100% { 
+    transform: scale(1) rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    color: #ffffff;
+  }
+}

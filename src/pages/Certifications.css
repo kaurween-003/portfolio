@@ -1,0 +1,351 @@
+.certifications {
+  padding: 4rem 0;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.certification-section {
+  margin-bottom: 5rem;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #E0A15D;
+  position: relative;
+}
+
+.section-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float-animation 3s ease-in-out infinite;
+}
+
+.section-info {
+  width: 100%;
+}
+
+.section-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 700;
+  margin: 0;
+}
+
+.section-counter {
+  background: #E0A15D;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-width: 80px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-animation 2s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(224, 161, 93, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-counter-number {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.section-counter-number.animate {
+  animation: countUp 0.6s ease-out;
+}
+
+.section-description {
+  color: #666666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cert-logo-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cert-logo {
+  max-width: 180px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.cert-logo:hover {
+  transform: scale(1.05);
+}
+
+.cert-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.cert-header h3 {
+  color: #000000;
+  font-size: 1.3rem;
+  margin: 0;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.cert-status {
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.status-completed {
+  background: #27ae60;
+  color: white;
+}
+
+.status-in-progress {
+  background: #E0A15D;
+  color: #000000;
+}
+
+.status-planned {
+  background: #3498db;
+  color: white;
+}
+
+.cert-issuer {
+  color: #666666;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cert-timeline {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #E0A15D;
+}
+
+.timeline-label {
+  font-weight: 600;
+  color: #000000;
+  margin-right: 0.5rem;
+}
+
+.timeline-text {
+  color: #555;
+  font-style: italic;
+}
+
+.cert-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cert-actions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.view-certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #E0A15D;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.view-certificate-btn:hover {
+  background: #d4941f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 161, 93, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.view-certificate-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(224, 161, 93, 0.3);
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    padding: 1.5rem;
+  }
+  
+  .section-icon {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .section-title-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-counter {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
+    min-width: 70px;
+    min-height: 45px;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  .certification-section {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Cert links styling */
+.cert-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cert-link {
+  color: #E0A15D;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cert-link:hover {
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+.cert-link i {
+  font-size: 1rem;
+}
+
+/* Cert details styling */
+.cert-details {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #000000;
+}
+
+.detail-value {
+  color: #555;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Featured badge for certifications */
+.cert-badge {
+  background: #ffd700;
+  color: #000000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
