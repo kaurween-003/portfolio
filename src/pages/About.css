@@ -63,6 +63,57 @@
   opacity: 0.9;
 }
 
+/* Functional Expertise Section */
+.functional-expertise-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid #E0A15D;
+}
+
+.functional-expertise-section .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #000000;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.expertise-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  border-left: 4px solid #E0A15D;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(224, 161, 93, 0.25);
+  border-left-width: 6px;
+}
+
+.expertise-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.expertise-skill {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
@@ -81,5 +132,22 @@
   .stat-card {
     flex: 1;
     min-width: 150px;
+  }
+
+  .functional-expertise-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  .functional-expertise-section .section-title {
+    font-size: 1.8rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-card {
+    padding: 1rem 1.25rem;
   }
 }
