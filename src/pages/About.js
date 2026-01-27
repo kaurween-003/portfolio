@@ -6,25 +6,6 @@ const About = () => {
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
   const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 });
   const [statsRef, statsVisible] = useScrollAnimation({ threshold: 0.3 });
-  const [expertiseRef, expertiseVisible] = useScrollAnimation({ threshold: 0.1 });
-
-  const functionalExpertise = [
-    { icon: '📊', skill: 'Log Monitoring & Triage' },
-    { icon: '🚨', skill: 'Incident Management' },
-    { icon: '🖥️', skill: 'Endpoint Security' },
-    { icon: '📋', skill: 'Project Management & Leadership' },
-    { icon: '🎯', skill: 'MITRE ATT&CK' },
-    { icon: '🌐', skill: 'Network Security' },
-    { icon: '☁️', skill: 'Cloud Security' },
-    { icon: '📈', skill: 'Data-Driven Stories & Reporting' },
-    { icon: '🔄', skill: 'Ticket Handling & Workflows' },
-    { icon: '📧', skill: 'Email Security' },
-    { icon: '🔍', skill: 'Threat Intelligence' },
-    { icon: '👥', skill: 'Team Leadership' },
-    { icon: '✅', skill: 'Alert Accuracy & Validation' },
-    { icon: '🦠', skill: 'Malware Analysis' },
-    { icon: '🔬', skill: 'Root Cause Analysis' },
-  ];
 
   return (
     <div className="about">
