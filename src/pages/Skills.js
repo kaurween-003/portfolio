@@ -23,6 +23,13 @@ const Skills = () => {
     { icon: '✅', skill: 'Alert Accuracy & Validation' },
     { icon: '🦠', skill: 'Malware Analysis' },
     { icon: '🔬', skill: 'Root Cause Analysis' },
+    { icon: '⚖️', skill: 'Risk Assessment' },
+    { icon: '🤝', skill: 'Third Party Risk Management (TPRM)' },
+    { icon: '📜', skill: 'Compliance & Governance' },
+    { icon: '🏛️', skill: 'NIST CSF & NIST 800-53' },
+    { icon: '🔏', skill: 'Privacy Impact Analysis' },
+    { icon: '🛡️', skill: 'Security Operations' },
+    { icon: '📑', skill: 'ISO 27001' },
   ];
 
   const technicalTools = [
