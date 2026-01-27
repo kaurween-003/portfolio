@@ -8,7 +8,7 @@ const Certifications = () => {
   const [certifications, setCertifications] = useState([]);
 
   useEffect(() => {
-    // Load certifications from localStorage (populated by admin)
+    // Load certifications from localStorage
     const savedCerts = localStorage.getItem('portfolioCertifications');
     if (savedCerts) {
       setCertifications(JSON.parse(savedCerts));

@@ -45,18 +45,6 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <p>&copy; {currentYear} Kulween Kaur. All rights reserved.</p>
-          <p>
-            
-            <a href="/admin" style={{ 
-              color: '#666', 
-              textDecoration: 'none', 
-              marginLeft: '0.5rem',
-              fontSize: '0.8rem',
-              opacity: '0.7'
-            }}>
-              Admin
-            </a>
-          </p>
         </div>
       </div>
     </footer>

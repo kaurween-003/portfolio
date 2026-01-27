@@ -5,7 +5,7 @@ const HomeLab = () => {
   const [homelabItems, setHomelabItems] = useState([]);
 
   useEffect(() => {
-    // Load homelab items from localStorage (populated by admin)
+    // Load homelab items from localStorage
     const savedItems = localStorage.getItem('portfolioHomelab');
     if (savedItems) {
       setHomelabItems(JSON.parse(savedItems));

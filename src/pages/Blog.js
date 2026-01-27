@@ -6,7 +6,7 @@ const Blog = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
   useEffect(() => {
-    // Load blogs from localStorage (populated by admin)
+    // Load blogs from localStorage
     const savedBlogs = localStorage.getItem('portfolioBlogs');
     if (savedBlogs) {
       setBlogPosts(JSON.parse(savedBlogs));

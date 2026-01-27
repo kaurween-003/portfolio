@@ -8,7 +8,7 @@ const Skills = () => {
   const [skillSections, setSkillSections] = useState([]);
 
   useEffect(() => {
-    // Load skills from localStorage (populated by admin)
+    // Load skills from localStorage
     const savedSkills = localStorage.getItem('portfolioSkills');
     if (savedSkills) {
       setSkillSections(JSON.parse(savedSkills));

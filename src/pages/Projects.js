@@ -8,7 +8,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Load projects from localStorage (populated by admin)
+    // Load projects from localStorage
     const savedProjects = localStorage.getItem('portfolioProjects');
     if (savedProjects) {
       setProjects(JSON.parse(savedProjects));
