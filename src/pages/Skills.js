@@ -33,12 +33,14 @@ const Skills = () => {
   ];
 
   const technicalTools = [
+    { category: 'Framework', tools: ['NIST CSF', 'NIST 800-53', 'ISO 27001', 'OWASP'], icon: '📋' },
     { category: 'SIEM Tools', tools: ['Splunk', 'SumoLogic'], icon: '📡' },
     { category: 'Sandboxes', tools: ['Hybrid Analysis', 'ANY.RUN', 'VirusTotal', 'Mxtoolbox'], icon: '🧪' },
-    { category: 'Firewall', tools: ['Cisco Firepower', 'Fortinet', 'Palo Alto'], icon: '🛡️' },
-    { category: 'Ticketing Tools', tools: ['ServiceNow', 'Remedy'], icon: '🎫' },
-    { category: 'Vulnerability Scanner', tools: ['Nessus', 'Burp Suite'], icon: '🔓' },
+    { category: 'Network Security', tools: ['Firewall', 'IDS', 'IPS', 'DLP', 'DMZ', 'NAC'], icon: '🌐' },
+    { category: 'Ticketing Tools', tools: ['ServiceNow', 'JIRA'], icon: '🎫' },
+    { category: 'Vulnerability Scanner', tools: ['Rapid 7', 'Nessus', 'Burp Suite'], icon: '🔓' },
     { category: 'Endpoint Security', tools: ['Symantec', 'McAfee', 'CrowdStrike'], icon: '💻' },
+    { category: 'Identity & Access Management', tools: ['Active Directory', 'Azure Directory', 'SailPoint', 'CyberArk (PAM)'], icon: '🔐' },
     { category: 'Cloud Platforms', tools: ['Azure', 'AWS'], icon: '☁️' },
     { category: 'Threat Intelligence', tools: ['ThreatConnect'], icon: '🎯' },
     { category: 'Traffic Analysis', tools: ['Wireshark'], icon: '📶' },
