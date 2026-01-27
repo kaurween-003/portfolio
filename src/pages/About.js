@@ -55,23 +55,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-        <section className="functional-expertise-section" ref={expertiseRef}>
-          <h2 className={`section-title fade-in ${expertiseVisible ? 'visible' : ''}`}>
-            Functional Expertise
-          </h2>
-          <div className="expertise-grid">
-            {functionalExpertise.map((item, index) => (
-              <div 
-                key={index} 
-                className={`expertise-card animated-card scale-in ${expertiseVisible ? 'visible' : ''} stagger-${(index % 6) + 1}`}
-              >
-                <span className="expertise-icon">{item.icon}</span>
-                <span className="expertise-skill">{item.skill}</span>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   );

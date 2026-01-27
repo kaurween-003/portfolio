@@ -6,6 +6,7 @@ const Skills = () => {
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 });
   const [skillsRef, skillsVisible] = useScrollAnimation({ threshold: 0.1 });
   const [expertiseRef, expertiseVisible] = useScrollAnimation({ threshold: 0.1 });
+  const [toolsRef, toolsVisible] = useScrollAnimation({ threshold: 0.1 });
   const [skillSections, setSkillSections] = useState([]);
 
   const functionalExpertise = [
@@ -24,6 +25,20 @@ const Skills = () => {
     { icon: '✅', skill: 'Alert Accuracy & Validation' },
     { icon: '🦠', skill: 'Malware Analysis' },
     { icon: '🔬', skill: 'Root Cause Analysis' },
+  ];
+
+  const technicalTools = [
+    { category: 'SIEM Tools', tools: ['Splunk', 'SumoLogic'], icon: '📡' },
+    { category: 'Sandboxes', tools: ['Hybrid Analysis', 'ANY.RUN', 'VirusTotal', 'Mxtoolbox'], icon: '🧪' },
+    { category: 'Firewall', tools: ['Cisco Firepower', 'Fortinet', 'Palo Alto'], icon: '🛡️' },
+    { category: 'Ticketing Tools', tools: ['ServiceNow', 'Remedy'], icon: '🎫' },
+    { category: 'Vulnerability Scanner', tools: ['Nessus', 'Burp Suite'], icon: '🔓' },
+    { category: 'Endpoint Security', tools: ['Symantec', 'McAfee', 'CrowdStrike'], icon: '💻' },
+    { category: 'Cloud Platforms', tools: ['Azure', 'AWS'], icon: '☁️' },
+    { category: 'Threat Intelligence', tools: ['ThreatConnect'], icon: '🎯' },
+    { category: 'Traffic Analysis', tools: ['Wireshark'], icon: '📶' },
+    { category: 'Programming Languages', tools: ['Python', 'Java', 'JavaScript'], icon: '💻' },
+    { category: 'Scripting Language', tools: ['SQL'], icon: '📝' },
   ];
 
   useEffect(() => {
@@ -71,6 +86,35 @@ const Skills = () => {
               >
                 <span className="expertise-icon">{item.icon}</span>
                 <span className="expertise-skill">{item.skill}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Technical Tools Section */}
+        <section className="technical-tools-section" ref={toolsRef}>
+          <div className="section-header">
+            <div className="section-icon">🛠️</div>
+            <div className="section-info">
+              <h2 className="section-title">Technical Tools</h2>
+              <p className="section-description">Industry-standard tools and technologies I work with</p>
+            </div>
+          </div>
+          <div className="tools-grid">
+            {technicalTools.map((item, index) => (
+              <div 
+                key={index} 
+                className={`tool-card animated-card slide-up ${toolsVisible ? 'visible' : ''} stagger-${(index % 6) + 1}`}
+              >
+                <div className="tool-header">
+                  <span className="tool-icon">{item.icon}</span>
+                  <h3 className="tool-category">{item.category}</h3>
+                </div>
+                <div className="tool-list">
+                  {item.tools.map((tool, toolIndex) => (
+                    <span key={toolIndex} className="tool-tag">{tool}</span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

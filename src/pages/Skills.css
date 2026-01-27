@@ -156,6 +156,70 @@
   letter-spacing: 0.02em;
 }
 
+/* Technical Tools Section */
+.technical-tools-section {
+  margin-bottom: 4rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #E0A15D;
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(224, 161, 93, 0.2);
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+}
+
+.tool-category {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-tag {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tool-tag:hover {
+  background: #E0A15D;
+  transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -209,5 +273,18 @@
 
   .expertise-card {
     padding: 1rem 1.25rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    padding: 1.25rem;
+  }
+
+  .tool-tag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
   }
 }
