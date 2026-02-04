@@ -1,19 +1,80 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import './Certifications.css';
 
 const Certifications = () => {
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.1 });
-  const [certRef, certVisible] = useScrollAnimation({ threshold: 0.05 });
-  const [certifications, setCertifications] = useState([]);
+  const [profRef, profVisible] = useScrollAnimation({ threshold: 0.05 });
+  const [ciscoRef, ciscoVisible] = useScrollAnimation({ threshold: 0.05 });
+  const [udemyRef, udemyVisible] = useScrollAnimation({ threshold: 0.05 });
+  const [internRef, internVisible] = useScrollAnimation({ threshold: 0.05 });
 
-  useEffect(() => {
-    // Load certifications from localStorage
-    const savedCerts = localStorage.getItem('portfolioCertifications');
-    if (savedCerts) {
-      setCertifications(JSON.parse(savedCerts));
+  const certificationSections = [
+    {
+      id: 'professional',
+      icon: '🏆',
+      title: 'Professional Certifications',
+      description: 'Industry-recognized certifications from leading technology organizations',
+      ref: profRef,
+      visible: profVisible,
+      certifications: [
+        {
+          id: 1,
+          name: 'Google Cybersecurity Professional Certificate',
+          issuer: 'Google',
+          logo: '/images/certifications/google-logo.webp',
+          date: '',
+          credentialId: '',
+          verificationUrl: '',
+        },
+        {
+          id: 2,
+          name: 'Security+ CompTIA',
+          issuer: 'CompTIA',
+          logo: '/images/certifications/comptia-logo.png',
+          date: '',
+          credentialId: '',
+          verificationUrl: '',
+        },
+        {
+          id: 3,
+          name: 'Microsoft SC-900',
+          issuer: 'Microsoft',
+          logo: '/images/certifications/microsoft-logo.jpg',
+          date: '',
+          credentialId: '',
+          verificationUrl: '',
+        },
+      ]
+    },
+    {
+      id: 'cisco',
+      icon: '🌐',
+      title: 'Cisco Skills for All Courses',
+      description: 'Networking and security courses from Cisco\'s learning platform',
+      ref: ciscoRef,
+      visible: ciscoVisible,
+      certifications: []
+    },
+    {
+      id: 'udemy',
+      icon: '📚',
+      title: 'Udemy Courses',
+      description: 'Self-paced online courses for continuous learning and skill development',
+      ref: udemyRef,
+      visible: udemyVisible,
+      certifications: []
+    },
+    {
+      id: 'internships',
+      icon: '💼',
+      title: 'Virtual Internships',
+      description: 'Hands-on virtual experience programs with leading companies',
+      ref: internRef,
+      visible: internVisible,
+      certifications: []
     }
-  }, []);
+  ];
 
   return (
     <div className="certifications">
@@ -25,78 +86,82 @@ const Certifications = () => {
           Certifications & Achievements
         </h1>
         
-        {certifications.length === 0 && (
-          <div className="empty-state" style={{
-            textAlign: 'center',
-            padding: '4rem 2rem',
-            color: '#666'
-          }}>
-            <p style={{ fontSize: '1.2rem' }}>No certifications added yet. Check back soon!</p>
-          </div>
-        )}
-        
-        <div className="certifications-grid" ref={certRef}>
-          {certifications.map((cert, index) => (
-            <div 
-              key={cert.id} 
-              className={`certification-card animated-card slide-up ${certVisible ? 'visible' : ''} stagger-${(index % 6) + 1}`}
-            >
-              {cert.logo && (
-                <div className="cert-logo-section">
-                  <img src={cert.logo} alt={cert.issuer} className="cert-logo" />
+        <p className="page-subtitle">
+          A collection of professional certifications, courses, and learning achievements
+        </p>
+
+        {certificationSections.map((section) => (
+          <section key={section.id} className="certification-section" ref={section.ref}>
+            <div className="section-header">
+              <div className="section-icon">{section.icon}</div>
+              <div className="section-info">
+                <div className="section-title-container">
+                  <h2 className="section-title">{section.title}</h2>
+                  <span className="section-counter">{section.certifications.length}</span>
                 </div>
-              )}
-              
-              <div className="cert-content">
-                <div className="cert-header">
-                  <h3>{cert.name}</h3>
-                  {cert.featured && (
-                    <span className="cert-badge">⭐ Featured</span>
-                  )}
-                </div>
-                
-                <p className="cert-issuer">{cert.issuer}</p>
-                
-                <div className="cert-timeline">
-                  <span className="timeline-label">📅 Date:</span>
-                  <span className="timeline-text">{new Date(cert.date).toLocaleDateString()}</span>
-                </div>
-                
-                {cert.credentialId && (
-                  <div className="cert-details">
-                    <div className="detail-item">
-                      <span className="detail-label">Credential ID:</span>
-                      <span className="detail-value">{cert.credentialId}</span>
-                    </div>
-                  </div>
-                )}
-                
-                <div className="cert-links">
-                  {cert.verificationUrl && (
-                    <a 
-                      href={cert.verificationUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="cert-link"
-                    >
-                      <i className="fas fa-check-circle"></i> Verify
-                    </a>
-                  )}
-                  {cert.certificateUrl && (
-                    <a 
-                      href={cert.certificateUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="cert-link"
-                    >
-                      <i className="fas fa-certificate"></i> View Certificate
-                    </a>
-                  )}
-                </div>
+                <p className="section-description">{section.description}</p>
               </div>
             </div>
-          ))}
-        </div>
+            
+            {section.certifications.length === 0 ? (
+              <div className="coming-soon">
+                <p>🚧 Certifications coming soon...</p>
+              </div>
+            ) : (
+              <div className="certifications-grid">
+                {section.certifications.map((cert, index) => (
+                  <div 
+                    key={cert.id} 
+                    className={`certification-card animated-card slide-up ${section.visible ? 'visible' : ''} stagger-${(index % 6) + 1}`}
+                  >
+                    {cert.logo && (
+                      <div className="cert-logo-section">
+                        <img src={cert.logo} alt={cert.issuer} className="cert-logo" />
+                      </div>
+                    )}
+                    
+                    <div className="cert-content">
+                      <div className="cert-header">
+                        <h3>{cert.name}</h3>
+                      </div>
+                      
+                      <p className="cert-issuer">{cert.issuer}</p>
+                      
+                      {cert.date && (
+                        <div className="cert-timeline">
+                          <span className="timeline-label">📅 Date:</span>
+                          <span className="timeline-text">{cert.date}</span>
+                        </div>
+                      )}
+                      
+                      {cert.credentialId && (
+                        <div className="cert-details">
+                          <div className="detail-item">
+                            <span className="detail-label">Credential ID:</span>
+                            <span className="detail-value">{cert.credentialId}</span>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {cert.verificationUrl && (
+                        <div className="cert-links">
+                          <a 
+                            href={cert.verificationUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="cert-link"
+                          >
+                            🔗 Verify Certificate
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        ))}
       </div>
     </div>
   );

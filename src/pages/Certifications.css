@@ -4,6 +4,31 @@
   background: #f8f9fa;
 }
 
+.page-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 2px dashed #E0A15D;
+}
+
+.coming-soon p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
 .certification-section {
   margin-bottom: 5rem;
 }
