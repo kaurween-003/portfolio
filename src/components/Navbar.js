@@ -37,7 +37,7 @@ const Navbar = () => {
       const navbarHeight = 80;
       
       // Get all sections on the page
-      const sections = document.querySelectorAll('section, .hero, .features, .cta, .about, .skills, .projects, .blog, .homelab, .contact, .certifications');
+      const sections = document.querySelectorAll('section, .hero, .features, .cta, .about, .skills, .projects, .blog, .contact, .certifications');
       
       let currentSection = null;
       
@@ -69,7 +69,7 @@ const Navbar = () => {
         } else if (backgroundColor.includes('rgb(0, 0, 0)') || backgroundColor.includes('#000') || currentSection.classList.contains('hero') || currentSection.classList.contains('cta')) {
           // Black background sections
           setNavbarTheme('black');
-        } else if (backgroundColor.includes('rgb(255, 255, 255)') || backgroundColor.includes('#fff') || backgroundColor.includes('248, 249, 250') || currentSection.classList.contains('features') || currentSection.classList.contains('skills') || currentSection.classList.contains('projects') || currentSection.classList.contains('blog') || currentSection.classList.contains('homelab') || currentSection.classList.contains('contact') || currentSection.classList.contains('certifications')) {
+        } else if (backgroundColor.includes('rgb(255, 255, 255)') || backgroundColor.includes('#fff') || backgroundColor.includes('248, 249, 250') || currentSection.classList.contains('features') || currentSection.classList.contains('skills') || currentSection.classList.contains('projects') || currentSection.classList.contains('blog') || currentSection.classList.contains('contact') || currentSection.classList.contains('certifications')) {
           // White or light background sections
           setNavbarTheme('white');
         } else {
@@ -146,13 +146,6 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Blog
-          </Link>
-          <Link 
-            to="/homelab" 
-            className={`navbar-link ${isActive('/homelab') ? 'active' : ''}`}
-            onClick={closeMenu}
-          >
-            HomeLab
           </Link>
           <Link 
             to="/contact" 

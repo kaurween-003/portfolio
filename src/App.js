@@ -9,7 +9,6 @@ import Skills from './pages/Skills';
 import Certifications from './pages/Certifications';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
-import HomeLab from './pages/HomeLab';
 import Contact from './pages/Contact';
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/homelab" element={<HomeLab />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
