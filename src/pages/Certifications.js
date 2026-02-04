@@ -25,7 +25,7 @@ const Certifications = () => {
           logo: '/images/certifications/google-logo.webp',
           date: '',
           credentialId: '',
-          verificationUrl: '',
+          certificateUrl: '',
         },
         {
           id: 2,
@@ -34,16 +34,16 @@ const Certifications = () => {
           logo: '/images/certifications/comptia-logo.png',
           date: '',
           credentialId: '',
-          verificationUrl: '',
+          certificateUrl: '',
         },
         {
           id: 3,
           name: 'Microsoft SC-900',
           issuer: 'Microsoft',
           logo: '/images/certifications/microsoft-logo.jpg',
-          date: '',
-          credentialId: '',
-          verificationUrl: '',
+          date: 'November 19, 2023',
+          credentialId: 'C4FE2E07870962DC',
+          certificateUrl: '',
         },
       ]
     },
@@ -143,15 +143,15 @@ const Certifications = () => {
                         </div>
                       )}
                       
-                      {cert.verificationUrl && (
-                        <div className="cert-links">
+                      {cert.certificateUrl && (
+                        <div className="cert-actions">
                           <a 
-                            href={cert.verificationUrl} 
+                            href={cert.certificateUrl} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="cert-link"
+                            className="view-certificate-btn"
                           >
-                            🔗 Verify Certificate
+                            📜 View Certificate
                           </a>
                         </div>
                       )}
