@@ -319,7 +319,7 @@ const Certifications = () => {
           id: 9,
           name: 'Cyber',
           issuer: 'Deloitte Australia',
-          logo: '/images/certifications/dello',
+          logo: '/images/certifications/delloite.jpg',
           date: '',
           certificateUrl: '',
         },
