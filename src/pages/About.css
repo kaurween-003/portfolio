@@ -10,11 +10,54 @@
   color: #000000;
 }
 
+/* Stats Section - Horizontal Centered */
+.about-stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #000000;
+  color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(224, 161, 93, 0.3);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #E0A15D;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* About Content Section */
 .about-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-text h2 {
@@ -36,50 +79,37 @@
   font-size: 1.1rem;
 }
 
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.stat-card {
-  background: #000000;
-  color: white;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.stat-card h3 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #E0A15D;
-}
-
-.stat-card p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
 @media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .about-stats-section {
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    min-width: 140px;
+    padding: 1.5rem;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 2rem;
   }
   
   .page-title {
     font-size: 2.5rem;
   }
-  
-  .about-stats {
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .about-stats-section {
+    flex-direction: column;
+    align-items: center;
   }
   
   .stat-card {
-    flex: 1;
-    min-width: 150px;
+    width: 100%;
+    max-width: 250px;
   }
 }

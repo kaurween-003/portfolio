@@ -23,9 +23,8 @@ const Certifications = () => {
           name: 'Google Cybersecurity Professional Certificate',
           issuer: 'Google',
           logo: '/images/certifications/google-logo.webp',
-          date: '',
-          credentialId: '',
-          certificateUrl: '',
+          date: 'February 6th, 2026',
+          certificateUrl: 'images/certifications/google_cert_kulween.pdf',
         },
         {
           id: 2,
@@ -33,16 +32,14 @@ const Certifications = () => {
           issuer: 'CompTIA',
           logo: '/images/certifications/comptia-logo.png',
           date: '',
-          credentialId: '',
           certificateUrl: '',
         },
         {
           id: 3,
-          name: 'Microsoft SC-900',
+          name: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals',
           issuer: 'Microsoft',
           logo: '/images/certifications/microsoft-logo.jpg',
           date: 'November 19, 2023',
-          credentialId: 'C4FE2E07870962DC',
           certificateUrl: '/images/certifications/Credentials - kulweenkaur _ Microsoft Learn.pdf',
         },
       ]
@@ -135,7 +132,7 @@ const Certifications = () => {
           issuer: 'Udemy',
           logo: '/images/certifications/udemy9.png',
           date: 'February 09, 2025',
-          certificateUrl: '/images/certifications/Credentials - kulweenkaur_ Information_Security_Fundamentals.pdf',
+          certificateUrl: '/images/certifications/Udemy_NMAP Mastery.pdf',
         },
         {
           id: 3,
@@ -143,7 +140,7 @@ const Certifications = () => {
           issuer: 'Udemy',
           logo: '/images/certifications/udemy10.png',
           date: 'February 09, 2025',
-          certificateUrl: '/images/certifications/Credentials - kulweenkaur_ Information_Security_Fundamentals.pdf',
+          certificateUrl: '/images/certifications/udemy_cert_power_bi.pdf',
         },
         {
           id: 4,
@@ -151,7 +148,7 @@ const Certifications = () => {
           issuer: 'Udemy',
           logo: '/images/certifications/udemy13.jpg',
           date: 'February 09, 2025',
-          certificateUrl: '/images/certifications/Credentials - kulweenkaur_ Information_Security_Fundamentals.pdf',
+          certificateUrl: '/images/certifications/udemy_cert_master_active_directory.pdf',
         },
         {
           id: 5,
@@ -159,7 +156,7 @@ const Certifications = () => {
           issuer: 'Udemy',
           logo: '/images/certifications/udemy14.png',
           date: 'February 09, 2025',
-          certificateUrl: '/images/certifications/Credentials - kulweenkaur_ Information_Security_Fundamentals.pdf',
+          certificateUrl: '/images/certifications/udemy_cert_servicenow.pdf',
         },
         {
           id: 6,
@@ -239,7 +236,7 @@ const Certifications = () => {
           issuer: 'Udemy',
           logo: '/images/certifications/udemy6.png',
           date: 'February 09, 2025',
-          certificateUrl: '/images/certifications/Credentials - kulweenkaur_ Information_Security_Fundamentals.pdf',
+          certificateUrl: '/images/certifications/udemy_cert_microsoft_azure.pdf',
         },
       ]
     },
