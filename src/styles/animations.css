@@ -42,6 +42,12 @@
   transform: translateX(0);
 }
 
+@media (max-width: 768px) {
+  .slide-left {
+    transform: translateX(-10px);
+  }
+}
+
 /* Slide In From Right */
 .slide-right {
   opacity: 0;
