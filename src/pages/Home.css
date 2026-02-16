@@ -270,6 +270,7 @@
 
   .hero-text {
     overflow: visible;
+    padding-top: 2rem;
   }
 
   .hero-title {
